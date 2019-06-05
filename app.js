@@ -84,8 +84,8 @@ function renderCircles(circlesGroup, newXScale, chosenXAxis, newYScale, chosenYA
 function renderText(textGroup, newXScale, chosenXAxis, newYScale, chosenYAxis) {
   textGroup.transition()
     .duration(1000)
-    .attr("cx", d => newXScale(d[chosenXAxis]))
-    .attr("cy", d => newYScale(d[chosenYAxis]));  
+    .attr("x", d => newXScale(d[chosenXAxis]) - 7)
+    .attr("y", d => newYScale(d[chosenYAxis]) + 4);  
   return textGroup;
 }
 
