@@ -116,7 +116,7 @@ function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
     .attr("class", "tooltip")
     .offset([80, -60])
     .html(function(d) {
-      return (`${xlabel} ${d[chosenXAxis]}<br>${ylabel} ${d[chosenYAxis]}`);
+      return (`${d.state}<br>${xlabel} ${d[chosenXAxis]}<br>${ylabel} ${d[chosenYAxis]}`);
     });
 
   circlesGroup.call(toolTip);
@@ -237,7 +237,7 @@ d3.csv("Data.csv", function(err, pData) {
     .attr("y", -30)
     .attr("value", "healthcare") // value to grab for event listener
     .classed("inactive", true)
-    .text("Healthcare");
+    .text("Has healthcare (%)");
 
   // updateToolTip function above csv import
   var circlesGroup = updateToolTip(chosenXAxis, chosenYAxis, circlesGroup);
