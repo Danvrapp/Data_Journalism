@@ -20,7 +20,7 @@
   font: 12px sans-serif;
   color: white;
   text-align: center;
-  background: #551aaf;
+  background: black;
   border: 0;
   border-radius: 10px;
 }
@@ -50,4 +50,8 @@
 .inactive:hover {
   fill: #e75480;
   cursor: pointer;
+}
+
+.statename {
+  color : white !important;
 }
